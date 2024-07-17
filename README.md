@@ -11,4 +11,4 @@ ArgoCD アプリケーション作成後の状態は下記のようになりま�
 * Project `deployvm` が作成されます
 * 上記のProject配下に2台のVM(`fedora01`,`fedora02`)が作成されます（停止状態）
 
-![デプロイ結果](figure/fig01.png "Result")
+![デプロイ結果](figure/result.png "Result")
