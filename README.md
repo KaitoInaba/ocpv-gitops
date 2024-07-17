@@ -1,6 +1,6 @@
+# GitOpsによるVMデプロイのデモ
 OpenShift Vitualization + OpenShift GitOpsの極簡単なデモです。
 VirtualizationとGitOpsのOperatorをインストールの上、下記のコマンド実行することでArgoCDアプリケーションが設定されます。
-構成ドリフトの修正やVM削除しても戻ることなどをお示し頂くのにご利用ください。
 
 ```
 oc apply -f https://raw.githubusercontent.com/KaitoInaba/ocpv-gitops/main/deployvm/apps.yaml
