@@ -1,0 +1,43 @@
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  name: fedoraclone
+  annotations:
+    description: VM example from GitOps
+  labels:
+    kubevirt.io/vm: vm-dv-clone
+  namespace: deployvm
+spec:
+  running: true
+  template:
+    metadata:
+      labels:
+        kubevirt.io/vm: vm-dv-clone
+    spec:
+      domain:
+        devices:
+          disks:
+          - disk:
+              bus: virtio
+            name: root-disk
+        resources:
+          requests:
+            memory: 2Gi
+      volumes:
+      - dataVolume:
+          name: fedoraclone
+        name: root-disk
+  dataVolumeTemplates:
+  - metadata:
+      name: fedorainstalled
+    spec:
+      storage:
+        accessModes:
+        - ReadWriteMany
+        resources:
+          requests:
+            storage: 30Gi
+      source:
+        pvc:
+          namespace: deployvm
+          name: fedorainstalled
