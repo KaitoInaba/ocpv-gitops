@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: vmgitops
+  name: VM deploy from GitOps
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: vmgitops
+    namespace: deployvm
     server: https://kubernetes.default.svc
   project: default
   source:
