@@ -14,5 +14,5 @@ ArgoCD アプリケーション作成後の状態は下記のようになりま�
 ![デプロイ結果](figure/result.png "Result")
 
 ## ご留意事項
-* まっさらな環境でクイックにデプロイできることを優先しているため、VMのrootdiskはContainer Storageを指定しています = Ephemeralストレージのため再起動後ごとに初期状態に戻ります。
+* まっさらな環境でクイックにデプロイできることを優先しているため、VMのrootdiskはContainer Storageを指定しています = Ephemeralストレージのため再起動ごとに初期状態に戻ります。
   実使用時はインストール済みのPVなどをrootdiskにご指定ください。
