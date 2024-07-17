@@ -9,7 +9,7 @@ metadata:
     os.template.kubevirt.io/fedora: 'true'
   namespace: deployvm
 spec:
-  running: false
+  running: true
   template:
     metadata:
       annotations:

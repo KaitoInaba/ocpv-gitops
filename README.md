@@ -9,6 +9,6 @@ oc apply -f https://raw.githubusercontent.com/KaitoInaba/ocpv-gitops/main/deploy
 ArgoCD アプリケーション作成後の状態は下記のようになります。
 * ArgoCDアプリケーション `vmdeployfromgitops` が作成されます
 * Project `deployvm` が作成されます
-* 上記のProject配下に2台のVM(`fedora01`,`fedora02`)が作成されます（停止状態）
+* 上記のProject配下に2台のVM(`fedora01`,`fedora02`)が作成されます
 
 ![デプロイ結果](figure/result.png "Result")
