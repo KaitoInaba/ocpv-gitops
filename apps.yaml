@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: vmgitops
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: vmgitops
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: deployvm/
+    repoURL: https://github.com/KaitoInaba/ocpv-gitops
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: false
+    syncOptions:
+    - CreateNamespace=true
