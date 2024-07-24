@@ -16,3 +16,10 @@ ArgoCD アプリケーション作成後の状態は下記のようになりま�
 ## ご留意事項
 * まっさらな環境でクイックにデプロイできることを優先しているため、VMのrootdiskはContainer Storageを指定しています = Ephemeralストレージのため再起動ごとに初期状態に戻ります。
   実使用時は[PVC のクローン作成による仮想マシンの作成](https://docs.redhat.com/ja/documentation/openshift_container_platform/4.15/html/virtualization/creating-vms-from-custom-images#virt-creating-vms-by-cloning-pvcs)などにより永続ストレージをご指定ください。
+
+## 参考
+ArgoCDのデフォルトAdminpパスワード取得コマンド
+
+```
+oc extract secret/openshift-gitops-cluster -n openshift-gitops --to=-
+```
